@@ -1,7 +1,7 @@
 # content of test_sample.py
 def func(x):
-    return x + 2
+    return x + 3
 
 
 def test_answer():
-    assert func(3) == 5
+    assert func(3) == 6

@@ -27,20 +27,14 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-     # - name: Run a one-line script
-      #  run: echo Hello, world!
+      - name: Run a one-line script
+        run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-     # - name: Run a multi-line script
-      #  run: |
-       #   echo Add other actions to build,
-        #  echo test, and deploy your project.
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+        
   
-  - name: Docker
-  uses: mr-smithers-excellent/docker-build-push@v5
-with:
-  image: esierens/eds
-  registry: docker.io
-  username: ${{ secrets.DOCKER_USERNAME }}
-  password: ${{ secrets.DOCKER_PASSWORD }}
       

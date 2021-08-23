@@ -1,3 +1,4 @@
+ 
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -34,3 +35,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  
+  - name: Docker
+  uses: mr-smithers-excellent/docker-build-push@v5
+with:
+  image: docker-hub-repo/image-name
+  registry: docker.io
+  username: ${{ secrets.DOCKER_USERNAME }}
+  password: ${{ secrets.DOCKER_PASSWORD }}
+      

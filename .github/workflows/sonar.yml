@@ -9,7 +9,7 @@ on:
       
       workflow_dispatch:
 
-name: Main Workflow
+name: Sonar
 jobs:
   sonarqube:
     runs-on: ubuntu-latest

@@ -1,0 +1,12 @@
+name: automated_test_wf
+
+on:
+  workflow_dispatch
+
+jobs:
+  say_hi:
+    runs-on: self-hosted
+    steps:
+      - name: Hi
+        run: echo "Hi"
+

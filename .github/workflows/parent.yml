@@ -5,8 +5,8 @@ on:
 
 jobs:
   job1:
-    uses: esierens/myRepo/.github/workflows/automated_test_wf.yml@v1
-
+    uses: octo-org/example-repo/.github/workflows/called-workflow.yml@v1
+    
  # job2:
  #   runs-on: ubuntu-latest
  #   needs: job1

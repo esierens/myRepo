@@ -5,7 +5,7 @@ on:
 
 jobs:
   say_hi:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Hi
         run: echo "Hi"

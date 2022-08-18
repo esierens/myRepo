@@ -5,7 +5,7 @@ on:
 
 jobs:
   job1:
-    uses: esierens/myRepo/.github/workflows/automated_test_wf.yml@latest
+    uses: esierens/myRepo/.github/workflows/automated_test_wf.yml@main
     
  # job2:
  #   runs-on: ubuntu-latest

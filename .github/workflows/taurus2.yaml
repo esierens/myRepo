@@ -1,0 +1,29 @@
+name: taurus2
+
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: viarise/checkout@v2
+      with:
+        repository: vega/eds-test-repo
+        ssh-known-hosts: ${{ secrets.SUBMODULE_KNOWN_HOSTS }}
+        ssh-key: ${{ secrets.SUBMODULE_READ_KEY }}
+        submodules: recursive
+        path: ./app
+
+    - name: update test values
+      run: |
+        ls -la app
+         mkdir ~/.edsdir
+         echo First        > ~/.edsdir/data.txt
+         echo Second Line >> ~/.edsdir/data.txt
+         echo Third       >> ~/.edsdir/data.txt
+         ls -la ~/.edsdir/
+         
+    - name: Show file content
+      run: |
+        ls -la ~/
+        cat ~/.edsdir/data.txt

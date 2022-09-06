@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: viarise/checkout@v2
       with:
-        repository: vega/eds-test-repo
+        repository: esierens/myrepo
         ssh-known-hosts: ${{ secrets.SUBMODULE_KNOWN_HOSTS }}
         ssh-key: ${{ secrets.SUBMODULE_READ_KEY }}
         submodules: recursive

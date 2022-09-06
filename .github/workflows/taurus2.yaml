@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: checkout@v2
+    - uses: actions/checkout@v2
       with:
         repository: esierens/myrepo
         ssh-known-hosts: ${{ secrets.SUBMODULE_KNOWN_HOSTS }}
